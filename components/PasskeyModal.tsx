@@ -84,7 +84,8 @@ const PasskeyModal = () => {
             />
           </AlertDialogTitle>
           <AlertDialogDescription>
-            To access the admin page, please enter the passkey.
+            To access the admin page, please enter the passkey. <br />
+            <span className="text-red-400">Passkey: 123456</span>
           </AlertDialogDescription>
         </AlertDialogHeader>
         <div>
@@ -94,12 +95,36 @@ const PasskeyModal = () => {
             onChange={(value) => setPasskey(value)}
           >
             <InputOTPGroup className="shad-otp">
-              <InputOTPSlot className="shad-otp-slot" index={0} />
-              <InputOTPSlot className="shad-otp-slot" index={1} />
-              <InputOTPSlot className="shad-otp-slot" index={2} />
-              <InputOTPSlot className="shad-otp-slot" index={3} />
-              <InputOTPSlot className="shad-otp-slot" index={4} />
-              <InputOTPSlot className="shad-otp-slot" index={5} />
+              <InputOTPSlot
+                className="shad-otp-slot"
+                index={0}
+                defaultValue={1}
+              />
+              <InputOTPSlot
+                className="shad-otp-slot"
+                index={1}
+                defaultValue={2}
+              />
+              <InputOTPSlot
+                className="shad-otp-slot"
+                index={2}
+                defaultValue={3}
+              />
+              <InputOTPSlot
+                className="shad-otp-slot"
+                index={3}
+                defaultValue={4}
+              />
+              <InputOTPSlot
+                className="shad-otp-slot"
+                index={4}
+                defaultValue={5}
+              />
+              <InputOTPSlot
+                className="shad-otp-slot"
+                index={5}
+                defaultValue={6}
+              />
             </InputOTPGroup>
           </InputOTP>
           {error && (

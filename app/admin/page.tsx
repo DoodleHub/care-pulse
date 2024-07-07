@@ -6,6 +6,10 @@ import { getRecentAppointmentList } from '@/lib/actions/appointment.actions';
 import { DataTable } from '@/components/table/DataTable';
 import { columns } from '@/components/table/columns';
 
+export const revalidate = 60;
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
+
 const Admin = async () => {
   const appointments = await getRecentAppointmentList();
 
